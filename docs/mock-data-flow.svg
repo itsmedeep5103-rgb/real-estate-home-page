@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="820" viewBox="0 0 1240 820" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0b3d91" />
+    </marker>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b3d91" />
+      <stop offset="100%" stop-color="#072a66" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1240" height="820" fill="#f4f6fa" />
+
+  <!-- Title -->
+  <text x="40" y="48" font-size="26" font-weight="700" fill="#072a66">Apna Ashiana Jaipur — Mock Data Flow</text>
+  <text x="40" y="74" font-size="14" fill="#4b5563">Every section is fed by a mock file through a single mock API. Swap one function for a real endpoint when ready.</text>
+
+  <!-- ===== Column 1: mock data files ===== -->
+  <rect x="40" y="110" width="300" height="470" rx="12" fill="#ffffff" stroke="#d8dee9" />
+  <text x="60" y="140" font-size="16" font-weight="700" fill="#072a66">src/mocks/ — data files</text>
+
+  <g>
+    <rect x="60" y="160" width="260" height="52" rx="8" fill="#e8eefb" stroke="#0b3d91" />
+    <text x="76" y="182" font-size="14" font-weight="700" fill="#072a66">site.js</text>
+    <text x="76" y="201" font-size="12" fill="#4b5563">brand, contact, navLinks</text>
+
+    <rect x="60" y="226" width="260" height="52" rx="8" fill="#e8eefb" stroke="#0b3d91" />
+    <text x="76" y="248" font-size="14" font-weight="700" fill="#072a66">hero.js</text>
+    <text x="76" y="267" font-size="12" fill="#4b5563">headline, sub, CTAs</text>
+
+    <rect x="60" y="292" width="260" height="52" rx="8" fill="#e8eefb" stroke="#0b3d91" />
+    <text x="76" y="314" font-size="14" font-weight="700" fill="#072a66">listings.js</text>
+    <text x="76" y="333" font-size="12" fill="#4b5563">9 properties</text>
+
+    <rect x="60" y="358" width="260" height="52" rx="8" fill="#e8eefb" stroke="#0b3d91" />
+    <text x="76" y="380" font-size="14" font-weight="700" fill="#072a66">agents.js</text>
+    <text x="76" y="399" font-size="12" fill="#4b5563">3 agents</text>
+
+    <rect x="60" y="424" width="260" height="52" rx="8" fill="#e8eefb" stroke="#0b3d91" />
+    <text x="76" y="446" font-size="14" font-weight="700" fill="#072a66">testimonials.js</text>
+    <text x="76" y="465" font-size="12" fill="#4b5563">3 reviews</text>
+
+    <rect x="60" y="490" width="260" height="52" rx="8" fill="#e8eefb" stroke="#0b3d91" />
+    <text x="76" y="512" font-size="14" font-weight="700" fill="#072a66">stats.js</text>
+    <text x="76" y="531" font-size="12" fill="#4b5563">4 site stats</text>
+  </g>
+
+  <!-- Arrows files -> index -->
+  <g stroke="#0b3d91" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <line x1="320" y1="186" x2="470" y2="310" />
+    <line x1="320" y1="252" x2="470" y2="330" />
+    <line x1="320" y1="318" x2="470" y2="350" />
+    <line x1="320" y1="384" x2="470" y2="370" />
+    <line x1="320" y1="450" x2="470" y2="390" />
+    <line x1="320" y1="516" x2="470" y2="410" />
+  </g>
+
+  <!-- ===== Column 2: mock API ===== -->
+  <rect x="470" y="250" width="220" height="240" rx="12" fill="url(#headerGrad)" />
+  <text x="490" y="282" font-size="16" font-weight="700" fill="#ffffff">mock/index.js</text>
+  <text x="490" y="306" font-size="12" fill="#dbe4f5">Central mock API</text>
+
+  <g font-size="12.5" fill="#ffffff">
+    <text x="490" y="336">fetchSite()</text>
+    <text x="490" y="360">fetchHero()</text>
+    <text x="490" y="384">fetchListings()</text>
+    <text x="490" y="408">fetchAgents()</text>
+    <text x="490" y="432">fetchTestimonials()</text>
+    <text x="490" y="456">fetchStats()</text>
+  </g>
+  <text x="490" y="482" font-size="11" fill="#c3cfe6">+350ms simulated delay</text>
+
+  <!-- ===== Column 3: page sections ===== -->
+  <rect x="790" y="110" width="410" height="590" rx="12" fill="#ffffff" stroke="#d8dee9" />
+  <text x="810" y="140" font-size="16" font-weight="700" fill="#072a66">Page — src/components/</text>
+
+  <g>
+    <rect x="810" y="160" width="370" height="56" rx="8" fill="#ffffff" stroke="#0b3d91" />
+    <text x="826" y="184" font-size="14" font-weight="700" fill="#072a66">Header</text>
+    <text x="826" y="203" font-size="12" fill="#4b5563">site.name + site.navLinks</text>
+
+    <rect x="810" y="228" width="370" height="56" rx="8" fill="#ffffff" stroke="#0b3d91" />
+    <text x="826" y="252" font-size="14" font-weight="700" fill="#072a66">Hero</text>
+    <text x="826" y="271" font-size="12" fill="#4b5563">hero.* + stats.*</text>
+
+    <rect x="810" y="296" width="370" height="56" rx="8" fill="#ffffff" stroke="#0b3d91" />
+    <text x="826" y="320" font-size="14" font-weight="700" fill="#072a66">Listings</text>
+    <text x="826" y="339" font-size="12" fill="#4b5563">listings[] + ListingCard</text>
+
+    <rect x="810" y="364" width="370" height="56" rx="8" fill="#ffffff" stroke="#0b3d91" />
+    <text x="826" y="388" font-size="14" font-weight="700" fill="#072a66">Agents</text>
+    <text x="826" y="407" font-size="12" fill="#4b5563">agents[]</text>
+
+    <rect x="810" y="432" width="370" height="56" rx="8" fill="#ffffff" stroke="#0b3d91" />
+    <text x="826" y="456" font-size="14" font-weight="700" fill="#072a66">Testimonials</text>
+    <text x="826" y="475" font-size="12" fill="#4b5563">testimonials[]</text>
+
+    <rect x="810" y="500" width="370" height="56" rx="8" fill="#ffffff" stroke="#0b3d91" />
+    <text x="826" y="524" font-size="14" font-weight="700" fill="#072a66">Footer</text>
+    <text x="826" y="543" font-size="12" fill="#4b5563">site.contact + site.navLinks</text>
+  </g>
+
+  <text x="810" y="586" font-size="12" fill="#4b5563">main landmark wraps Hero, Listings, Agents, Testimonials.</text>
+  <text x="810" y="604" font-size="12" fill="#4b5563">Header and Footer are landmarks outside main.</text>
+
+  <!-- Arrows index -> components -->
+  <g stroke="#0b3d91" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <line x1="690" y1="300" x2="810" y2="188" />
+    <line x1="690" y1="320" x2="810" y2="256" />
+    <line x1="690" y1="340" x2="810" y2="324" />
+    <line x1="690" y1="360" x2="810" y2="392" />
+    <line x1="690" y1="380" x2="810" y2="460" />
+    <line x1="690" y1="400" x2="810" y2="528" />
+  </g>
+
+  <!-- ===== Bottom: rinse-and-repeat pattern ===== -->
+  <rect x="40" y="700" width="1160" height="90" rx="12" fill="#ffffff" stroke="#d8dee9" />
+  <text x="60" y="732" font-size="15" font-weight="700" fill="#072a66">Rinse and repeat — add a new entity in 3 steps</text>
+  <text x="60" y="756" font-size="13" fill="#4b5563">1. Add a data file in src/mocks/   →   2. Add a fetchX() in mock/index.js   →   3. Build a component that calls it</text>
+  <text x="60" y="776" font-size="13" fill="#4b5563">Later, replace fetchX() with a real API call — components stay unchanged.</text>
+</svg>
